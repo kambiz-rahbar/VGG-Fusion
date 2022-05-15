@@ -1,6 +1,6 @@
 function [fusedimg] = calc_fusedimg(IMG, WMAP)
 
-fimg = zeros(size(IMG{1}));
+fimg = zeros([size(IMG{1}),size(WMAP{1},3)]);
 for k = 1:length(WMAP)
     weightmap = WMAP{k};
     wimg = zeros(size(IMG{1}));
